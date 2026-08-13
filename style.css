@@ -1,0 +1,133 @@
+/* ==========================================================================
+   כרטיס ביקור דיגיטלי - גיליון סגנונות
+   ----------------------------------------------------------------------
+   1. איפוס ובסיס
+   2. משתני צבע + מצב כהה/בהיר (CSS בלבד)
+   3. רקע דקורטיבי ופריסה כללית
+   4. סרגל עליון + מתג תצוגה
+   5. כרטיס הביקור
+   6. סטטיסטיקות
+   7. טקסט + אקורדיון
+   8. ציר זמן
+   9. טאבים ומדדי כישורים
+  10. פרויקטים + חלונות קופצים
+  11. יצירת קשר + באנר
+  12. כותרת תחתונה
+  13. אנימציות כניסה
+  14. רספונסיביות
+  15. הדפסה ונגישות
+   ========================================================================== */
+
+
+/* ========================= 1. איפוס ובסיס ========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Heebo", "Arial", "Helvetica", sans-serif;
+    background-color: #f4f5fb;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+
+/* ============ 2. משתני צבע + מצב כהה/בהיר (CSS בלבד) ============ */
+
+/* מצב בהיר - ברירת מחדל */
+.page {
+    --bg: #f4f5fb;
+    --orb-a: #6366f1;
+    --orb-b: #ec4899;
+    --orb-c: #22d3ee;
+    --orb-opacity: 0.20;
+
+    --surface: #ffffff;
+    --surface-2: #f1f2f9;
+    --surface-glass: rgba(255, 255, 255, 0.72);
+    --border: #e2e4f0;
+
+    --text: #171a2b;
+    --text-muted: #5c6079;
+
+    --accent: #5b5bd6;
+    --accent-2: #d946a8;
+    --accent-soft: #ececfb;
+    --accent-contrast: #ffffff;
+
+    --shadow: 0 10px 30px rgba(23, 26, 43, 0.08);
+    --shadow-lg: 0 20px 50px rgba(23, 26, 43, 0.12);
+
+    --radius: 18px;
+    --radius-sm: 12px;
+    --transition: 0.35s ease;
+    --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+/* תיבת הסימון המסתתרת שמפעילה את החלפת המצב */
+.theme-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* מצב כהה - נדלק כאשר תיבת הסימון מסומנת */
+.theme-input:checked ~ .page {
+    --bg: #0e1020;
+    --orb-opacity: 0.30;
+
+    --surface: #191c31;
+    --surface-2: #21243c;
+    --surface-glass: rgba(25, 28, 49, 0.72);
+    --border: #2c3050;
+
+    --text: #eef0fb;
+    --text-muted: #a2a7c4;
+
+    --accent: #8b8bf5;
+    --accent-2: #f472c0;
+    --accent-soft: #262a48;
+    --accent-contrast: #12142a;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* צביעת הרקע שמעבר לגבולות הגלילה */
+body:has(.theme-input:checked) {
+    background-color: #0e1020;
+}
+
+

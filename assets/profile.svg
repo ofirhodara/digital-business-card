@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="איור פרופיל">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <clipPath id="round">
+      <circle cx="200" cy="200" r="200"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="400" height="400" fill="url(#bg)"/>
+    <circle cx="70" cy="70" r="120" fill="#ffffff" opacity="0.08"/>
+    <circle cx="340" cy="330" r="90" fill="#ffffff" opacity="0.08"/>
+
+    <!-- כתפיים -->
+    <path d="M60 400c0-77 63-124 140-124s140 47 140 124z" fill="#1f2440"/>
+    <path d="M170 276h60v40h-60z" fill="#f0c9a8"/>
+
+    <!-- ראש -->
+    <ellipse cx="200" cy="185" rx="72" ry="82" fill="#f7d5b5"/>
+
+    <!-- שיער -->
+    <path d="M128 180c-6-58 30-92 72-92s78 34 72 92c-4-34-24-48-48-52-22 22-70 22-84 6-8 10-11 26-12 46z" fill="#2b2233"/>
+
+    <!-- עיניים -->
+    <ellipse cx="174" cy="184" rx="7" ry="9" fill="#2b2233"/>
+    <ellipse cx="226" cy="184" rx="7" ry="9" fill="#2b2233"/>
+
+    <!-- גבות -->
+    <path d="M162 166q12-8 24 0" stroke="#2b2233" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M214 166q12-8 24 0" stroke="#2b2233" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- חיוך -->
+    <path d="M180 216q20 18 40 0" stroke="#c98a6b" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <!-- צווארון -->
+    <path d="M170 300l30 30 30-30 18 10-48 46-48-46z" fill="#f4f5fb"/>
+  </g>
+</svg>

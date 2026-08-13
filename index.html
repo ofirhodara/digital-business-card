@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אופיר חודרה | כרטיס ביקור דיגיטלי</title>
+    <meta name="description" content="כרטיס ביקור דיגיטלי - אופיר חודרה, סטודנט למדעי המחשב ומפתח Front-End">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- מתג המצב הכהה/בהיר - CSS בלבד, ללא JavaScript -->
+    <input type="checkbox" id="theme-toggle" class="theme-input">
+
+    <div class="page">
+
+        <!-- כדורי רקע דקורטיביים -->
+        <div class="orbs" aria-hidden="true">
+            <span class="orb orb--1"></span>
+            <span class="orb orb--2"></span>
+            <span class="orb orb--3"></span>
+        </div>
+
+        <header class="topbar">
+            <div class="topbar__inner">
+                <a href="#top" class="logo">&lt;OH /&gt;</a>
+
+                <nav class="nav" aria-label="ניווט ראשי">
+                    <a href="#about">אודות</a>
+                    <a href="#journey">המסלול</a>
+                    <a href="#skills">כישורים</a>
+                    <a href="#projects">פרויקטים</a>
+                    <a href="#contact">קשר</a>
+                </nav>
+
+                <label for="theme-toggle" class="theme-switch" title="החלפת מצב תצוגה">
+                    <span class="theme-switch__track">
+                        <span class="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">☀</span>
+                        <span class="theme-switch__icon theme-switch__icon--moon" aria-hidden="true">☾</span>
+                        <span class="theme-switch__thumb"></span>
+                    </span>
+                    <span class="visually-hidden">מעבר בין מצב בהיר לכהה</span>
+                </label>
+            </div>
+        </header>
+
+        <main id="top">
+
+            <!-- ======================= כרטיס הביקור ======================= -->
+            <section class="card reveal" aria-labelledby="card-title">
+                <div class="card__photo">
+                    <span class="card__ring" aria-hidden="true"></span>
+                    <img src="assets/profile.svg" alt="תמונת הפרופיל של אופיר חודרה" width="200" height="200">
+                    <span class="card__badge">
+                        <span class="card__badge-dot" aria-hidden="true"></span>
+                        פנוי/ה להתמחות
+                    </span>
+                </div>
+
+                <div class="card__info">
+                    <p class="card__hello">שלום, נעים להכיר <span class="wave" aria-hidden="true">👋</span></p>
+                    <h1 id="card-title">אופיר חודרה</h1>
+                    <p class="card__role">סטודנט למדעי המחשב &middot; מפתח Front-End</p>
+                    <p class="card__tagline">
+                        בונה ממשקים נקיים, נגישים ומהירים &mdash; עם תשומת לב לפרטים הקטנים שעושים את ההבדל.
+                    </p>
+
+                    <ul class="chips">
+                        <li class="chip">📍 תל אביב, ישראל</li>
+                        <li class="chip">🎓 שנה ב'</li>
+                        <li class="chip">🌐 עברית / אנגלית</li>
+                    </ul>
+
+                    <div class="card__actions">
+                        <a class="btn btn--primary" href="#contact">צור קשר</a>
+                        <a class="btn btn--ghost" href="#projects">לפרויקטים שלי</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= סטטיסטיקות ======================= -->
+            <section class="stats reveal" aria-label="נתונים במספרים">
+                <div class="stat">
+                    <span class="stat__num">+2</span>
+                    <span class="stat__label">שנות כתיבת קוד</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num">12</span>
+                    <span class="stat__label">פרויקטים שנבנו</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num">2</span>
+                    <span class="stat__label">מקום בהאקתון</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num">∞</span>
+                    <span class="stat__label">כוסות קפה</span>
+                </div>
+            </section>
